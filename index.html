@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- ✅ SEO AVANZADO PARA TENSIDEN (MX) -->
+    <!-- ✅ SEO AVANÇADO PARA TENSIDEN (MX) -->
     <title>Tensiden™ Sitio Oficial México | -50% de Descuento | Pago contra entrega</title>
     <meta name="description" content="Apoya tu salud cardiovascular con Tensiden™. Aprovecha el 50% de descuento, pago al recibir y envío rápido en todo México. Fórmula natural para tu bienestar.">
     <meta name="keywords" content="Tensiden, Tensiden comprar, salud cardiovascular, suplemento presión, fórmula natural, pago contra entrega México, precio Tensiden">
     <link rel="canonical" href="https://tensiden.vercel.app/">
 
-    <!-- Open Graph / Social Media -->
+    <!-- Open Graph / Redes Sociais -->
     <meta property="og:title" content="Tensiden™ Sitio Oficial | Promoción -50%">
     <meta property="og:description" content="Cuida tu corazón con Tensiden™. Ahora con 50% de descuento. Pago contra entrega y envío discreto en México. ¡Ordena hoy!">
     <meta property="og:image" content="images/tensiden.png">
@@ -19,13 +19,13 @@
     <meta property="og:type" content="product">
     <meta property="og:locale" content="es_MX">
 
-    <!-- Desempeño y Seguridad -->
+    <!-- Desempenho e Segurança -->
     <meta name="referrer" content="no-referrer-when-downgrade">
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- ✅ Preload de Imágenes corregido para la carpeta images/ -->
+    <!-- ✅ Pré-carregamento de Imagens da pasta images/ -->
     <link rel="preload" as="image" href="images/tensiden-mob.png">
     <link rel="preload" as="image" href="images/tensiden.png">
 
@@ -53,7 +53,7 @@
     }
     </script>
 
-    <!-- UI Frameworks (Necessários para o Design) -->
+    <!-- Frameworks de UI (Apenas design, sem rastreamento) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -67,7 +67,7 @@
             background-color: #020617;
         }
         
-        /* ✅ Background corrigido com caminho relativo para a pasta images/ */
+        /* ✅ Fundo dinâmico com imagens locais */
         .page-bg {
             position: fixed;
             inset: 0;
@@ -86,13 +86,14 @@
             background: rgba(2, 6, 23, 0.45);
         }
 
-        /* Desktop Background - Pasta images/ */
+        /* Fundo para Desktop */
         @media (min-width: 1024px) {
             .page-bg { 
                 background-image: url('images/tensiden.png'); 
             }
         }
 
+        /* Barra de Cookies Estilizada */
         .cookie-consent-bar {
             position: fixed;
             bottom: 1.5rem;
@@ -114,7 +115,7 @@
         }
 
         .btn-official-primary {
-            background: #d32f2f; /* Rojo salud/cardio */
+            background: #d32f2f;
             color: #ffffff;
             transition: all 0.2s ease;
         }
@@ -148,7 +149,7 @@
 
     <div class="page-bg"></div>
 
-    <!-- Panel de Consentimiento de Cookies (México) -->
+    <!-- Painel de Consentimento de Cookies (México) -->
     <div class="cookie-consent-bar p-5 sm:p-7">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
             
@@ -189,7 +190,7 @@
         </div>
     </div>
 
-    <!-- Modal de Documentos Legales y Privacidad -->
+    <!-- Modal de Documentos Legais e Privacidade -->
     <div id="modalOverlay" class="modal-overlay fixed inset-0 z-[110] p-4 items-center justify-center" onclick="toggleModal(false)">
         <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden scale-95 transition-transform duration-300" onclick="event.stopPropagation()">
             <div class="bg-slate-900 p-6 flex justify-between items-center">
@@ -276,10 +277,10 @@
     </div>
 
     <script>
-        // Inicializar iconos
+        // Inicializar ícones do Lucide
         lucide.createIcons();
 
-        // Lógica del Modal
+        // Lógica de abertura/fecho do Modal
         function toggleModal(show) {
             const modal = document.getElementById('modalOverlay');
             const content = modal.querySelector('div');
@@ -298,7 +299,7 @@
             }
         }
 
-        // Cerrar con Escape
+        // Fechar com a tecla Escape
         document.addEventListener('keydown', (e) => { 
             if (e.key === 'Escape') toggleModal(false); 
         });
