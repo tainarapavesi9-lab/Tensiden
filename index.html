@@ -14,7 +14,7 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Tensiden™ Sitio Oficial | Promoción -50%">
     <meta property="og:description" content="Cuida tu corazón con Tensiden™. Ahora con 50% de descuento. Pago contra entrega y envío discreto en México. ¡Ordena hoy!">
-    <meta property="og:image" content="tensiden.png">
+    <meta property="og:image" content="images/tensiden.png">
     <meta property="og:url" content="https://tensiden.vercel.app/">
     <meta property="og:type" content="product">
     <meta property="og:locale" content="es_MX">
@@ -25,9 +25,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Preload de Imágenes de Fondo -->
-    <link rel="preload" as="image" href="tensiden-mob.png">
-    <link rel="preload" as="image" href="tensiden.png">
+    <!-- ✅ Preload de Imágenes corregido para la carpeta images/ -->
+    <link rel="preload" as="image" href="images/tensiden-mob.png">
+    <link rel="preload" as="image" href="images/tensiden.png">
 
     <!-- JSON-LD: Product -->
     <script type="application/ld+json">
@@ -35,7 +35,7 @@
       "@context": "https://schema.org",
       "@type": "Product",
       "name": "Tensiden",
-      "image": "tensiden.png",
+      "image": "images/tensiden.png",
       "description": "Suplemento natural de apoyo cardiovascular. Pago contra entrega y 50% de descuento en todo México.",
       "brand": {
         "@type": "Brand",
@@ -67,12 +67,12 @@
             background-color: #020617;
         }
         
-        /* ✅ Background dinámico con las imágenes solicitadas */
+        /* ✅ Background corrigido com caminho relativo para a pasta images/ */
         .page-bg {
             position: fixed;
             inset: 0;
             z-index: -1;
-            background-image: url('tensiden-mob.png'); 
+            background-image: url('images/tensiden-mob.png'); 
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
@@ -86,10 +86,10 @@
             background: rgba(2, 6, 23, 0.45);
         }
 
-        /* Desktop Background */
+        /* Desktop Background - Pasta images/ */
         @media (min-width: 1024px) {
             .page-bg { 
-                background-image: url('tensiden.png'); 
+                background-image: url('images/tensiden.png'); 
             }
         }
 
