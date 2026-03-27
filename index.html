@@ -269,4 +269,39 @@
                 </section>
             </div>
 
-            <div class="p-6 border-t border-slate-
+            <div class="p-6 border-t border-slate-50 flex gap-3">
+                <button onclick="toggleModal(false)" class="w-full py-4 text-[12px] font-bold bg-slate-900 text-white rounded-xl shadow-lg hover:bg-black transition-all">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Inicializar iconos
+        lucide.createIcons();
+
+        // Lógica del Modal
+        function toggleModal(show) {
+            const modal = document.getElementById('modalOverlay');
+            const content = modal.querySelector('div');
+            if (show) {
+                modal.style.display = 'flex';
+                setTimeout(() => {
+                    modal.classList.add('active');
+                    content.classList.remove('scale-95');
+                    content.classList.add('scale-100');
+                }, 10);
+            } else {
+                modal.classList.remove('active');
+                content.classList.remove('scale-100');
+                content.classList.add('scale-95');
+                setTimeout(() => { modal.style.display = 'none'; }, 300);
+            }
+        }
+
+        // Cerrar con Escape
+        document.addEventListener('keydown', (e) => { 
+            if (e.key === 'Escape') toggleModal(false); 
+        });
+    </script>
+</body>
+</html>
